@@ -1,0 +1,6 @@
+<form action="/jockeys/<%= @jockey.id %> " method="post">
+  <p>Edit name</p>
+  <input type="hidden" name="_method" value="PUT" />
+  <textarea name="jockey[name]"><%= @jockey.name %></textarea><br/>
+  <input type="submit" />
+</form>

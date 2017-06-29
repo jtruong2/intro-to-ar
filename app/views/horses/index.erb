@@ -1,0 +1,9 @@
+<h1>All Horses</h1>
+<% @horses.each do |horse| %>
+  <h3><%= horse.id %>. <%= horse.name %></h3>
+  <a href="/horses/<%= horse.id %>/edit">edit</a>
+  <form action="/horses/<%= horse.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete">
+  </form>
+<% end %>

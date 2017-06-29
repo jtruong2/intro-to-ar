@@ -1,0 +1,8 @@
+<p>Edit information</p>
+<form action="/horses/<%= @horse.id %>" method="post">
+  <input type="hidden" name="_method" value="PUT" />
+  <textarea name="horse[name]"><%= @horse.name %></textarea></br>
+  <textarea name="horse[age]"><%= @horse.age %></textarea></br>
+  <textarea name="horse[total_winnings]"><%= @horse.total_winnings %></textarea>
+  <input type="submit" />
+</form>

@@ -1,0 +1,10 @@
+<h1>All Jockeys</h1>
+<a href="/jockeys/new">Add Jockey</a>
+<% @jockeys.each do |jockey| %>
+  <h3><%= jockey.id %>. <%= jockey.name %></h3>
+  <a href="/jockeys/<%= jockey.id %>/edit">Edit</a>
+  <form action="/jockeys/<%= jockey.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete" />
+  </form>
+<% end %>
